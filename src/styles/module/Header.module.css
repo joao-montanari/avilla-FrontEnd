@@ -4,13 +4,27 @@
     display: flex;
     align-items: center;
     background-color: #fff;
+}
+
+.child {
+    width: 50%;
+    height: 100%;
     border: 1px solid #000;
 }
 
 .logo {
-    margin-left: 10px;
+    float: left;
+    margin-top: 27.5px;
+    margin-left: 50px;
 }
 
 .comboBox {
-    
+    width: 150px;
+    padding: 8px;
+    float: right;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 0px;
+    margin-right: 50px;
+    border: 1px solid #fff;
 }

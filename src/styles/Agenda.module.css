@@ -1,3 +1,9 @@
 .main {
+    text-align: center;
     background-color: rgb(224, 224, 224);
+}
+
+.title{
+    font-size: 50px;
+    padding: 100px;
 }
