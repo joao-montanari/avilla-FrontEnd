@@ -1,4 +1,11 @@
 .main {
-    width: 1000px;
+    margin: auto;
+    height: 680px;
+    width: 1300px;
+    border-radius: 25px;
+    border: 1px solid #000;
+}
+
+.tabela {
     border: 1px solid #000;
 }

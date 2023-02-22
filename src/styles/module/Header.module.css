@@ -9,7 +9,6 @@
 .child {
     width: 50%;
     height: 100%;
-    border: 1px solid #000;
 }
 
 .logo {
@@ -26,5 +25,6 @@
     text-align: center;
     border-radius: 0px;
     margin-right: 50px;
+    margin-top: 30px;
     border: 1px solid #fff;
 }
