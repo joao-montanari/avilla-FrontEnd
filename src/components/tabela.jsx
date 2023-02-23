@@ -1,18 +1,18 @@
 import React from 'react'
 import Styles from '@/styles/module/Tabela.module.css'
 
-export default function Tabela() {
+export default function Tabela(props) {
     return (
         <div className={Styles.main}>
             <h1 className='text-2xl m-5'>
-                Dia: xx/xx/xxxx
+                {props.dia_semana}
             </h1>
             
             <table class="w-full text-sm text-left">
                 <thead class="text-base text-gray-800 uppercase border dark:border-gray-700">
                     <tr>
                         <th scope="col" class="px-6 py-3 border-r dark:border-gray-700 text-center">
-                            Horario
+                            Horário
                         </th>
                         <th scope="col" class="px-6 py-3 border-r dark:border-gray-700 text-center">
                             ADM1 (M)
@@ -47,7 +47,7 @@ export default function Tabela() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             07:00
                         </th>
@@ -82,7 +82,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-500 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             08:00
                         </th>
@@ -117,7 +117,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             09:00
                         </th>
@@ -152,7 +152,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-500 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             10:00
                         </th>
@@ -187,7 +187,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             11:00
                         </th>
@@ -222,7 +222,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-500 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             12:00
                         </th>
@@ -257,7 +257,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             13:00
                         </th>
@@ -292,7 +292,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-500 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             14:00
                         </th>
@@ -327,7 +327,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             15:00
                         </th>
@@ -362,7 +362,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-500 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             16:00
                         </th>
@@ -397,7 +397,7 @@ export default function Tabela() {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-400 border-b dark:border-gray-700">
+                    <tr class="bg-gray-300 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             17:00
                         </th>

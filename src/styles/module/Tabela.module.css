@@ -1,11 +1,7 @@
 .main {
-    margin: auto;
-    height: 850px;
-    width: 1300px;
-    border-radius: 25px;
-    border: 1px solid #000;
-}
-
-.tabela {
+    margin: 15px;
+    margin-bottom: 50px;
+    height: 845px;
+    width: 1200px;
     border: 1px solid #000;
 }

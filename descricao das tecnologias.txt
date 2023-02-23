@@ -1,0 +1,12 @@
+FRAMER-MOTION
+A biblioteca Framer Motion é uma ferramenta de animação declarativa para React, que permite criar animações e transições elegantes e fluidas de forma fácil e intuitiva.
+Ela utiliza uma sintaxe simples e concisa baseada em propriedades CSS para controlar a animação de elementos HTML, como o posicionamento, o tamanho, a opacidade, a rotação e outras características. Além disso, a Framer Motion oferece suporte a animações complexas, como animações em sequência, em paralelo, com eventos de interação do usuário e muitas outras opções avançadas.
+A biblioteca também inclui recursos para gerenciamento de estado, gestos de usuário, integração com outras bibliotecas e suporte a várias plataformas, incluindo a web, dispositivos móveis e aplicativos desktop. Com isso, a Framer Motion se tornou uma das principais escolhas para desenvolvedores que desejam criar animações e interfaces de usuário impressionantes em seus projetos React.
+
+FRAMEWORK NEXT JS
+Next.js é um framework de React para desenvolvimento de aplicativos web, com foco em produção e escalabilidade. Ele permite renderização no lado do servidor (SSR) e também geração de página estática (SSG), proporcionando uma experiência de carregamento rápido aos usuários.
+Next.js é altamente configurável, permitindo que os desenvolvedores personalizem o comportamento padrão do framework. Ele também suporta rotas dinâmicas e código dividido automático, ajudando a manter as páginas leves e melhorando o desempenho.
+Outras características do Next.js incluem suporte a TypeScript, integração com bibliotecas populares como styled-components e Redux, e uma API fácil de usar para desenvolvimento de API. Além disso, o Next.js possui uma grande comunidade de desenvolvedores, fornecendo muitos recursos e pacotes de terceiros úteis para acelerar o desenvolvimento.
+
+TAILWIND
+Tailwind CSS é uma biblioteca de classes CSS pré-construídas que ajuda a acelerar o processo de desenvolvimento de front-end. Ao contrário de outras bibliotecas CSS como Bootstrap e Foundation, o Tailwind não tem um estilo visual definido. Em vez disso, ele fornece classes úteis para propriedades CSS comuns, permitindo que o desenvolvedor customize facilmente o estilo e o layout da interface do usuário. O Tailwind também inclui ferramentas úteis, como um sistema de grid responsivo e utilitários para facilitar a criação de variantes de cores e tipografia consistente em todo o projeto.
