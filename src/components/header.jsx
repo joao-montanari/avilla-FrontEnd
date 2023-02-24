@@ -4,7 +4,7 @@ import Styles from "@/styles/module/Header.module.css"
 
 export default function Header() {
     return (
-        <div className={Styles.container}>
+        <div className='w-full h-24 flex items-center bg-white shadow-xl'>
             <div className={Styles.child}>
                 <Image
                     className={Styles.logo}
