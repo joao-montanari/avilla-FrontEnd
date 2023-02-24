@@ -1,6 +1,8 @@
 import React from 'react'
 import Styles from '@/styles/module/Tabela.module.css'
 
+import Card from './card'
+
 export default function Tabela(props) {
     return (
         <div className={Styles.main}>
@@ -47,12 +49,12 @@ export default function Tabela(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             07:00
                         </th>
-                        <td class="px-6 py-4 border-r dark:border-gray-700 text-center">
-                            
+                        <td class="border-r dark:border-gray-700 text-center flex justify-center my-1.5">
+                            <Card/>
                         </td>
                         <td class="px-6 py-4 border-r dark:border-gray-700 text-center">
                             
@@ -82,7 +84,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             08:00
                         </th>
@@ -117,7 +119,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             09:00
                         </th>
@@ -152,7 +154,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             10:00
                         </th>
@@ -187,7 +189,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             11:00
                         </th>
@@ -222,7 +224,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             12:00
                         </th>
@@ -257,7 +259,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             13:00
                         </th>
@@ -292,7 +294,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             14:00
                         </th>
@@ -327,7 +329,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             15:00
                         </th>
@@ -362,7 +364,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-zinc-300 border-b dark:border-gray-700">
+                    <tr class="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             16:00
                         </th>
@@ -397,7 +399,7 @@ export default function Tabela(props) {
                             
                         </td>
                     </tr>
-                    <tr class="bg-gray-300 border-b dark:border-gray-700">
+                    <tr class="bg-gray-100 border-b dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
                             17:00
                         </th>

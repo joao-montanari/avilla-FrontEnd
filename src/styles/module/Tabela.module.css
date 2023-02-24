@@ -1,7 +1,7 @@
 .main {
     margin: 15px;
     margin-bottom: 50px;
-    height: 845px;
-    width: 1200px;
+    min-height: 795px;
+    min-width: 1300px;
     border: 1px solid #000;
 }
