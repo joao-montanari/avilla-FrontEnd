@@ -13,6 +13,13 @@ export default function Agenda() {
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
+        var Xmas95 = new Date('2000-10-30');
+        var day = Xmas95.getDate();
+        console.log(day)
+        var Xmas95 = new Date('December 25, 1995 23:15:30');
+        var weekday = Xmas95.getDay();
+        console.log(weekday)
+        
         setWidth((carrossel.current?.scrollWidth - carrossel.current?.offsetWidth) + 25)
     }, [])
 
