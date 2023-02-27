@@ -7,19 +7,61 @@ import Header from '@/components/Header'
 import Tabela from '@/components/tabela'
 import Popup from '@/components/popup'
 
-export default function Agenda() {
-    const [verAula, setVerAula] = useState(false)
+export async function getStaticProps() {
+    const data = await fetch('http://localhost:8000/schedule/')
+    const agenda = await data.json()
+
+    return {
+        props : { agenda }
+    }
+}
+
+export default function Agenda({ agenda }) {
+    const [verAula, setVerAula] = useState(false);
     const carrossel = useRef();
     const [width, setWidth] = useState(0);
 
+    const [segunda, setSegunda] = useState([]);
+    const [terca, setTerca] = useState([]);
+    const [quarta, setQuarta] = useState([]);
+    const [quinta, setQuinta] = useState([]);
+    const [sexta, setSexta] = useState([]);
+
     useEffect(() => {
-        var Xmas95 = new Date('2000-10-30');
-        var day = Xmas95.getDate();
-        console.log(day)
-        var Xmas95 = new Date('December 25, 1995 23:15:30');
-        var weekday = Xmas95.getDay();
-        console.log(weekday)
-        
+
+        agenda.map(agendamento => {
+            var data = new Date(agendamento.data);
+            var week = data.getDay();
+
+            if (week === 0 && !(segunda.includes(agendamento))) {
+                segunda.push(agendamento)
+                setSegunda(segunda)
+            } else if (week === 1 && !(terca.includes(agendamento))) {
+                terca.push(agendamento)
+                setTerca(terca)
+            } else if (week === 2 && !(quarta.includes(agendamento))) {
+                quarta.push(agendamento)
+                setQuarta(quarta)
+            } else if (week === 3 && !(quinta.includes(agendamento))) {
+                quinta.push(agendamento)
+                setQuinta(quinta)
+            } else if (week === 4 && !(sexta.includes(agendamento))) {
+                sexta.push(agendamento)
+                setSexta(sexta)
+            }
+        })
+
+        var data = new Date();
+        // O primeiro dia é o dia do mês, menos o dia da semana
+        var primeiro = data.getDate() - data.getDay(); 
+        var primeiroDia = new Date(data.setDate(primeiro));
+        var ultimoDia = new Date(data.setDate(data.getDate() + 6));
+        console.log(primeiroDia)
+
+        const dia = data.getDate()
+        const mes = data.getMonth()
+        console.log(dia, mes)
+
         setWidth((carrossel.current?.scrollWidth - carrossel.current?.offsetWidth) + 25)
     }, [])
 
@@ -46,11 +88,11 @@ export default function Agenda() {
                             dragConstraints={{ right: 0, left: -width }}
                         >
                             
-                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'} aulas={segunda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'} aulas={terca}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'} aulas={quarta}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'} aulas={quinta}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'} aulas={sexta}/>
 
                         </motion.div>
                     </motion.div>
