@@ -22,7 +22,7 @@ export default function Home() {
       <main className={styles.main}>
         <Header/>
         <h1>Ola Mundo!</h1>
-        <Popup/>
+        <Popup trigger={true}/>
       </main>
     </>
   )

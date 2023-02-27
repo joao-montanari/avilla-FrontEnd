@@ -1,7 +1,8 @@
 import React from 'react'
+import { useState } from 'react'
 import Styles from '@/styles/module/Tabela.module.css'
 
-import Card from './card'
+import Popup from './popup'
 
 export default function Tabela(props) {
     return (
@@ -12,7 +13,6 @@ export default function Tabela(props) {
             <h3 className='m-2 text-lg'>
                 Data: 24/02/2023
             </h3>
-            
             <table class="w-full text-sm text-left">
                 <thead class="text-base text-gray-800 uppercase border dark:border-gray-700">
                     <tr>
@@ -57,7 +57,13 @@ export default function Tabela(props) {
                             07:00
                         </th>
                         <td class="border-r dark:border-gray-700 text-center justify-center my-1.5">
-                            <Card/>
+                            <button
+                                className='w-5/6 h-12 border border-gray-900 rounded text-sm m-auto'
+                                onClick={() => props.setTrigger(true)}
+                            >
+                                <p>Aula</p>
+                                <p>Instrutor</p>
+                            </button>
                         </td>
                         <td class="border-r dark:border-gray-700 text-center">
                         

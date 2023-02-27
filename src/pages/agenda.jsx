@@ -5,8 +5,10 @@ import { useState, useEffect, useRef } from 'react'
 
 import Header from '@/components/Header'
 import Tabela from '@/components/tabela'
+import Popup from '@/components/popup'
 
 export default function Agenda() {
+    const [verAula, setVerAula] = useState(false)
     const carrossel = useRef();
     const [width, setWidth] = useState(0);
 
@@ -21,6 +23,7 @@ export default function Agenda() {
             </Head>
             <main className='text-center mb-14'>
                 <Header/>
+                <Popup trigger={verAula} setTrigger={setVerAula}/>
                 <h1 className='text-5xl p-10'>
                     Agenda da Semana
                 </h1>
@@ -36,11 +39,11 @@ export default function Agenda() {
                             dragConstraints={{ right: 0, left: -width }}
                         >
                             
-                            <Tabela dia_semana={'Segunda-Feira'} />
-                            <Tabela dia_semana={'Terça-Feira'}/>
-                            <Tabela dia_semana={'Quarta-Feira'}/>
-                            <Tabela dia_semana={'Quinta-Feira'}/>
-                            <Tabela dia_semana={'Sexta-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'}/>
 
                         </motion.div>
                     </motion.div>
