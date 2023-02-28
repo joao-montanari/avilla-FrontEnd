@@ -13,6 +13,7 @@ export default function Popup(props){
                             src={'/img/close.png'}
                             width={25}
                             height={25}
+                            alt='close'
                         />
                     </button>
                     <h1 className="text-3xl">

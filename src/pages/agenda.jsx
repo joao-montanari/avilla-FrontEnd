@@ -16,54 +16,46 @@ export async function getStaticProps() {
     }
 }
 
-export default function Agenda({ agenda }) {
-    const [verAula, setVerAula] = useState(false);
-    const carrossel = useRef();
-    const [width, setWidth] = useState(0);
+function getSemanaDecorrente() {
+    const semanaFormat = [];
+    const semana = [];
+    var data = new Date();
 
-    const [segunda, setSegunda] = useState([]);
-    const [terca, setTerca] = useState([]);
-    const [quarta, setQuarta] = useState([]);
-    const [quinta, setQuinta] = useState([]);
-    const [sexta, setSexta] = useState([]);
+    // O primeiro dia é o dia do mês, menos o dia da semana
+    var primeiro = data.getDate() - data.getDay();
+    var primeiroDia = new Date(data.setDate(primeiro));
+    semana.push(primeiroDia);
+
+    for (var i = 0; i < 6; i++) {
+        semana.push(new Date(data.setDate(data.getDate() + 1)));
+    }
+    
+    semana.map(diaSemana => {
+        var Pdia = diaSemana.getDate().toString(),
+            dia = (Pdia.length == 1) ? '0'+Pdia : Pdia,
+            Pmes = (diaSemana.getMonth()+1).toString(),
+            mes = (Pmes.length == 1) ? '0'+Pmes : Pmes,
+            ano = diaSemana.getFullYear();
+
+        semanaFormat.push(dia + '/' + mes + '/' + ano);
+    })
+    return semanaFormat;
+}
+
+export default function Agenda({ agenda }) {
+    const carrossel = useRef();
+    const [verAula, setVerAula] = useState(false);
+    const [width, setWidth] = useState(0);
+    const [semana, setSemana] = useState([]);
 
     useEffect(() => {
-
-        agenda.map(agendamento => {
-            var data = new Date(agendamento.data);
-            var week = data.getDay();
-
-            if (week === 0 && !(segunda.includes(agendamento))) {
-                segunda.push(agendamento)
-                setSegunda(segunda)
-            } else if (week === 1 && !(terca.includes(agendamento))) {
-                terca.push(agendamento)
-                setTerca(terca)
-            } else if (week === 2 && !(quarta.includes(agendamento))) {
-                quarta.push(agendamento)
-                setQuarta(quarta)
-            } else if (week === 3 && !(quinta.includes(agendamento))) {
-                quinta.push(agendamento)
-                setQuinta(quinta)
-            } else if (week === 4 && !(sexta.includes(agendamento))) {
-                sexta.push(agendamento)
-                setSexta(sexta)
-            }
-        })
-
-        var data = new Date();
-        // O primeiro dia é o dia do mês, menos o dia da semana
-        var primeiro = data.getDate() - data.getDay(); 
-        var primeiroDia = new Date(data.setDate(primeiro));
-        var ultimoDia = new Date(data.setDate(data.getDate() + 6));
-        console.log(primeiroDia)
-
-        const dia = data.getDate()
-        const mes = data.getMonth()
-        console.log(dia, mes)
+        var retorno = getSemanaDecorrente();
+        setSemana(retorno);
 
         setWidth((carrossel.current?.scrollWidth - carrossel.current?.offsetWidth) + 25)
     }, [])
+
+    console.log(semana);
 
     return (
         <>
@@ -88,11 +80,11 @@ export default function Agenda({ agenda }) {
                             dragConstraints={{ right: 0, left: -width }}
                         >
                             
-                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'} aulas={segunda}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'} aulas={terca}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'} aulas={quarta}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'} aulas={quinta}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'} aulas={sexta}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'} dia={semana[1]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'} dia={semana[2]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'} dia={semana[3]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'} dia={semana[4]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'} dia={semana[5]} aulas={agenda}/>
 
                         </motion.div>
                     </motion.div>
