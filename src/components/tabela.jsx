@@ -5,16 +5,25 @@ import Styles from '@/styles/module/Tabela.module.css'
 import Popup from './popup'
 
 export default function Tabela(props) {
-    const [aula, setAula] = useState([]);
+    const [aulas, setAulas] = useState([]);
+    // const [adm1, setAdm1] = useState([]);
+    // const [adm2, setAdm2] = useState([]);
+    // const [ds3, setDs3] = useState([]);
+    // const [ds4, setDs4] = useState([]);
+    // const [ds5, setDs5] = useState([]);
+    // const [ds6, setDs6] = useState([]);
+    // const [ds7, setDs7] = useState([]);
+    // const [md3, setMd3] = useState([]);
+    // const [mec1, setMec1] = useState([]);
 
     props.aulas.map(agendamento => {
-        if (agendamento.data ===  props.dia && !(aula.includes(agendamento))) {
-            aula.push(agendamento);
-            setAula(aula);
+        if (agendamento.data ===  props.dia && !(aulas.includes(agendamento))) {
+            aulas.push(agendamento);
+            setAulas(aulas);
         }
     })
 
-    console.log(aula);
+    console.log(aulas);
 
     return (
         <div className={Styles.main}>
@@ -76,33 +85,15 @@ export default function Tabela(props) {
                                 <p>Instrutor</p>
                             </button>
                         </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                        
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
+                        {
+                            aulas.map(aula => {
+                                if(aula.turma === 'Manha') {
+                                    <td className="border-r dark:border-gray-700 text-center">
+                                        <button>Ola Mundo</button>
+                                    </td>
+                                }
+                            })
+                        }
                     </tr>
                     <tr className="bg-zinc-50 border-b dark:border-gray-700">
                         <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
