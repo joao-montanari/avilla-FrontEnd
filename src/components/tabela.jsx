@@ -86,13 +86,24 @@ export default function Tabela(props) {
                             </button>
                         </td>
                         {
-                            aulas.map(aula => {
-                                if(aula.turma === 'Manha') {
-                                    <td className="border-r dark:border-gray-700 text-center">
-                                        <button>Ola Mundo</button>
-                                    </td>
-                                }
-                            })
+                            aulas.map((aula) => (
+                                (
+                                    aula.turma === 'Manha' ? 
+                                        <td className="border-r dark:border-gray-700 text-center">
+                                            <button
+                                                className='w-5/6 h-12 border border-gray-900 rounded text-sm m-auto'
+                                            >
+                                                <p className='text-xs'>
+                                                    {aula.instrutor}
+                                                </p>
+                                                <p className='text-xs'>
+                                                    {aula.sala}
+                                                </p>
+                                            </button>
+                                        </td> 
+                                : null )
+                            ))
+                          
                         }
                     </tr>
                     <tr className="bg-zinc-50 border-b dark:border-gray-700">

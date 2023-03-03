@@ -1,430 +1,86 @@
  export default function Test() {
+    const lista = [
+        'ola mundo',
+        'ola pessoas',
+        'ola planeta',
+        'ola sol',
+        'ola lua'
+    ]
+
     return(
-        <table className="w-full text-sm text-left">
-            <tbody className="text-base text-gray-800 uppercase border dark:border-gray-700">
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                        Horário
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+        <div className="w-auto h-auto m-auto border border-gray-900">
+            <div className="border-b border-black w-auto h-10 flex">
+                <ul className="flex">
+                    <li className="border-r border-black h-full w-48 text-center py-1.5">
+                        Horários
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         ADM1 (M)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         ADM2 (T)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         DS3 (T)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         DS4 (T)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         DS5 (M)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         DS6 (M)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         DS7 (T)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         MD3 (T)
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="border-r border-black h-full w-28 text-center py-1.5">
                         MEC 1º Ano
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
+                    </li>
+                    <li className="h-full w-28 text-center py-1.5">
                         MEC 2º Ano
-                    </th>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                    <td className="border-r dark:border-gray-700 text-center">
-                            
-                    </td>
-                </tr>
-            </tbody>
-            <thead>
-                <tr className="bg-gray-100 border-b dark:border-gray-700">
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        07:30
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        08:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        09:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        10:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        11:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        12:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        13:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        14:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        15:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        16:00
-                    </th>
-                    <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                        17:00
-                    </th>
-                </tr>
-            </thead>
-        </table>
+                    </li>
+                </ul>
+            </div>
+            <ul className="border-r border-black h-full w-48 grid">
+                <li className="border-b border-black text-center py-2">
+                    7:30
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    08:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    09:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    10:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    11:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    12:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    13:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    14:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    15:00
+                </li>
+                <li className="border-b border-black text-center py-2">
+                    16:00
+                </li>
+                <li className="text-center py-2">
+                    17:00
+                </li>
+            </ul>
+        </div>
     )
  }
