@@ -6,15 +6,6 @@ import Popup from './popup'
 
 export default function Tabela(props) {
     const [aulas, setAulas] = useState([]);
-    // const [adm1, setAdm1] = useState([]);
-    // const [adm2, setAdm2] = useState([]);
-    // const [ds3, setDs3] = useState([]);
-    // const [ds4, setDs4] = useState([]);
-    // const [ds5, setDs5] = useState([]);
-    // const [ds6, setDs6] = useState([]);
-    // const [ds7, setDs7] = useState([]);
-    // const [md3, setMd3] = useState([]);
-    // const [mec1, setMec1] = useState([]);
 
     props.aulas.map(agendamento => {
         if (agendamento.data ===  props.dia && !(aulas.includes(agendamento))) {
@@ -26,438 +17,259 @@ export default function Tabela(props) {
     console.log(aulas);
 
     return (
-        <div className={Styles.main}>
-            <h1 className='text-2xl m-2'>
+        <div className="w-max h-auto m-auto border border-gray-900 text-center m-10">
+            <h1 className="text-2xl m-2">
                 {props.dia_semana}
             </h1>
-            <h3 className='m-2 text-lg'>
-                Data: {props.dia}
+            <h3 className="text-lg m-2">
+                {props.dia}
             </h3>
-            <table className="w-full text-sm text-left">
-                <thead className="text-base text-gray-800 uppercase border dark:border-gray-700">
-                    <tr>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            Horário
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            ADM1 (M)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            ADM2 (T)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            DS3 (T)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            DS4 (T)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            DS5 (M)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            DS6 (M)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            DS7 (T)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            MD3 (T)
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            MEC 1º Ano
-                        </th>
-                        <th scope="col" className="px-6 py-3 border-r dark:border-gray-700 text-center bg-white">
-                            MEC 2º Ano
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            07:30
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center justify-center my-1.5">
-                            <button
-                                className='w-5/6 h-12 border border-gray-900 rounded text-sm m-auto'
-                                onClick={() => props.setTrigger(true)}
-                            >
-                                <p>Aula</p>
-                                <p>Instrutor</p>
-                            </button>
-                        </td>
+            <div className="border-b border-t border-black w-auto h-12 flex">
+                <ul className="flex">
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        Horários
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        ADM1 (M)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        ADM2 (T)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        DS3 (T)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        DS4 (T)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        DS5 (M)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        DS6 (M)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        DS7 (T)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        MD3 (T)
+                    </li>
+                    <li className="border-r border-black h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        MEC 1º Ano
+                    </li>
+                    <li className="h-full w-32 text-center py-3 font-bold bg-gray-200">
+                        MEC 2º Ano
+                    </li>
+                </ul>
+            </div>
+            <div className="flex">
+                <ul className="border-r border-black h-full w-32 grid">
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        7:30
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        08:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        09:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        10:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        11:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        12:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        13:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        14:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        15:00
+                    </li>
+                    <li className="border-b border-black text-center py-4 font-bold text-xl bg-gray-200">
+                        16:00
+                    </li>
+                    <li className="text-center py-4 font-bold text-xl bg-gray-200">
+                        17:00
+                    </li>
+                </ul>
+                <div className="flex">
+                    <div className="w-32 border-r border-black">
                         {
-                            aulas.map((aula) => (
+                            aulas.map((aula) =>(
                                 (
-                                    aula.turma === 'Manha' ? 
-                                        <td className="border-r dark:border-gray-700 text-center">
-                                            <button
-                                                className='w-5/6 h-12 border border-gray-900 rounded text-sm m-auto'
-                                            >
-                                                <p className='text-xs'>
-                                                    {aula.instrutor}
-                                                </p>
-                                                <p className='text-xs'>
-                                                    {aula.sala}
-                                                </p>
-                                            </button>
-                                        </td> 
+                                    aula.turma == "ADM1 (M)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
                                 : null )
                             ))
-                          
                         }
-                    </tr>
-                    <tr className="bg-zinc-50 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            08:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            09:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-zinc-50 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            10:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            11:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-zinc-50 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            12:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            13:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-zinc-50 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            14:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            15:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-zinc-50 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            16:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                    <tr className="bg-gray-100 border-b dark:border-gray-700">
-                        <th scope="row" className="px-6 py-4 text-lg text-gray-900 border-r dark:border-gray-700 text-center">
-                            17:00
-                        </th>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                        <td className="border-r dark:border-gray-700 text-center">
-                            
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "ADM2 (T)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "DS3 (T)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "DS4 (T)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "DS5 (M)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "DS (6)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "DS7 (T)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "MD3 (T)" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className="w-32 border-r border-black">
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "MEC 1 Ano" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                    <div className='w-32'>
+                        {
+                            aulas.map((aula) =>(
+                                (
+                                    aula.turma == "MEC 2 Ano" ?
+                                        <div className='border border-gray-900 text-center'>
+                                            <p className='text-xs'>
+                                                {aula.instrutor}
+                                            </p>
+                                            <p className='text-xs'>
+                                                {aula.sala}
+                                            </p>
+                                        </div>
+                                : null )
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

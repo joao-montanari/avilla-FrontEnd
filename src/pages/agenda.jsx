@@ -52,7 +52,7 @@ export default function Agenda({ agenda }) {
         var retorno = getSemanaDecorrente();
         setSemana(retorno);
 
-        setWidth((carrossel.current?.scrollWidth - carrossel.current?.offsetWidth) + 25)
+        setWidth((carrossel.current?.scrollWidth - carrossel.current?.offsetWidth) + 30)
     }, [])
 
     console.log(semana);
