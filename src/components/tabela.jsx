@@ -17,7 +17,7 @@ export default function Tabela(props) {
     console.log(aulas);
 
     return (
-        <div className="w-max h-auto m-auto border border-gray-900 text-center m-10">
+        <div className="w-max h-auto border border-gray-900 text-center ml-8 my-8">
             <h1 className="text-2xl m-2">
                 {props.dia_semana}
             </h1>
@@ -103,7 +103,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "ADM1 (M)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -120,7 +120,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "ADM2 (T)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -137,7 +137,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS3 (T)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -154,7 +154,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS4 (T)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -171,7 +171,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS5 (M)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -188,7 +188,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS (6)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -205,7 +205,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS7 (T)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -222,7 +222,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MD3 (T)" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -239,7 +239,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MEC 1 Ano" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
@@ -256,7 +256,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MEC 2 Ano" ?
-                                        <div className='border border-gray-900 text-center'>
+                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
                                             <p className='text-xs'>
                                                 {aula.instrutor}
                                             </p>
