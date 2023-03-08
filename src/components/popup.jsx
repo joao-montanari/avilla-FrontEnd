@@ -1,45 +1,89 @@
-import Image from "next/image"
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 
-export default function Popup(props){
-    return (props.trigger) ? (
-        <div className='w-96 max-w-xl min-h-72 bg-gray-200 p-4 rounded-xl shadow-2xl border border-gray-900 fixed text-left'>
-            <div className="relative">
-                <div className="items-center">
-                    <button 
-                        className='float-right'
-                        onClick={() => props.setTrigger(false)}
+export default function MyModal() {
+  let [isOpen, setIsOpen] = useState(true)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  return (
+    <>
+      <div className="fixed inset-0 flex items-center justify-center">
+        <button
+          type="button"
+          onClick={openModal}
+          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        >
+          Open dialog
+        </button>
+      </div>
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                    as="h1"
+                    className="text-xl leading-6 text-gray-900"
                     >
-                        <Image
-                            src={'/img/close.png'}
-                            width={25}
-                            height={25}
-                            alt='close'
-                        />
+                        Aula: 
+                    </Dialog.Title>
+                    <Dialog.Title
+                        as="h3"
+                        className="text-sm mt-2"
+                    >
+                        Instrutor: 
+                    </Dialog.Title>
+                    <div className="mt-2">
+                        <p className="text-sm text-gray-500">
+                            Your payment has been successfully submitted. We’ve sent
+                            you an email with all of the details of your order.
+                        </p>
+                    </div>
+
+                  <div className="mt-4">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Fechar
                     </button>
-                    <h1 className="text-3xl">
-                        Aula: Treinamento 5s
-                    </h1>
-                </div>
-                <br/>
-                <div className="w-52 h-3.5 bg-gray-500 rounded-lg"></div>
-                <h3 className="text-lg">
-                    Instrutor: Vanessa Mendes Vieira da Silva
-                </h3>
-                <p>
-                    Data: 24/02/2023
-                </p>
-                <p>
-                    Sala: BTC-01
-                </p>
-                <br/>
-                <h3 className="text-lg">
-                    Horário:
-                </h3>
-                <ul className="list-disc pl-8">
-                    <li>Início: 13:00</li>
-                    <li>Término: 16:00</li>
-                </ul>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
             </div>
-        </div>
-    ) : ""
+          </div>
+        </Dialog>
+      </Transition>
+    </>
+  )
 }

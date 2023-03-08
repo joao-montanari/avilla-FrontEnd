@@ -17,7 +17,7 @@ export default function Tabela(props) {
     console.log(aulas);
 
     return (
-        <div className="w-max h-auto border border-gray-900 text-center ml-8 my-8">
+        <div className="w-max h-auto border border-gray-900 text-center ml-8 my-8 bg-gray-50">
             <h1 className="text-2xl m-2">
                 {props.dia_semana}
             </h1>

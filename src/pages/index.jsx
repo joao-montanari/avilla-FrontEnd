@@ -7,7 +7,6 @@ import Header from '@/components/Header'
 import Tabela from '@/components/tabela'
 import Card from '@/components/card'
 import Popup from '@/components/popup'
-import Test from '@/components/test'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +22,7 @@ export default function Home() {
       <main className={styles.main}>
         <Header/>
         <h1>Ola Mundo!</h1>
-        <Test/>
+        <Popup/>
       </main>
     </>
   )
