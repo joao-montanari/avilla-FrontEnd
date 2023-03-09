@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
-export default function MyModal() {
+export default function Popup(props) {
   let [isOpen, setIsOpen] = useState(true)
 
   function closeModal() {
@@ -14,15 +14,13 @@ export default function MyModal() {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={openModal}
+        className="text-xs border border-black rounded h-14 m-1 p-1 text-center"
+      >
+        Abrir popUp
+      </button>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -52,27 +50,34 @@ export default function MyModal() {
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                     as="h1"
-                    className="text-xl leading-6 text-gray-900"
+                    className="text-xl text-gray-900"
                     >
-                        Aula: 
+                      🏫 Aula: {props.aula}
                     </Dialog.Title>
-                    <Dialog.Title
-                        as="h3"
-                        className="text-sm mt-2"
-                    >
-                        Instrutor: 
-                    </Dialog.Title>
-                    <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                            Your payment has been successfully submitted. We’ve sent
-                            you an email with all of the details of your order.
-                        </p>
-                    </div>
-
+                    <h3 className='text-lg mt-2 ml-2 text-gray-600'>
+                      Instrutor: {props.instrutor}
+                    </h3>
+                    <h3 className='text-lg mt-2 ml-2 text-gray-600'>
+                      Data:
+                    </h3>
+                    <h3 className='text-lg mt-2 ml-2 text-gray-600'>
+                      Sala:
+                    </h3>
+                    <h3 className='text-xl mt-4'>
+                      ⏰ Horário:
+                    </h3>
+                    <ul className='list-disc text-lg mt-2 ml-7 text-gray-600'>
+                      <li>
+                        Início:
+                      </li>
+                      <li>
+                        Término:
+                      </li>
+                    </ul>
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="w-full bg-blue-300 p-2 rounded-lg text-blue-900 border border-white hover:border-blue-900 hover:bg-blue-100 duration-500"
                       onClick={closeModal}
                     >
                       Fechar

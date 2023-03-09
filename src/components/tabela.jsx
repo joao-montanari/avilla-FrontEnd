@@ -103,14 +103,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "ADM1 (M)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -120,14 +120,7 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "ADM2 (T)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                        <Popup/>
                                 : null )
                             ))
                         }
