@@ -2,7 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
 export default function Popup(props) {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false)
@@ -17,9 +17,14 @@ export default function Popup(props) {
       <button
         type="button"
         onClick={openModal}
-        className="text-xs border border-black rounded h-14 m-1 p-1 text-center"
+        className={`duration-500 text-xs border border-gray-400 border-l-4 ${props.cor} rounded-xl h-14 w-[95%] mt-1 shadow hover:shadow-none hover:rounded-none hover:bg-slate-50`}
       >
-        Abrir popUp
+        <p>
+          {props.instrutor}
+        </p>
+        <p>
+          {props.sala}
+        </p>
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -58,20 +63,17 @@ export default function Popup(props) {
                       Instrutor: {props.instrutor}
                     </h3>
                     <h3 className='text-lg mt-2 ml-2 text-gray-600'>
-                      Data:
-                    </h3>
-                    <h3 className='text-lg mt-2 ml-2 text-gray-600'>
-                      Sala:
+                      Sala: {props.sala}
                     </h3>
                     <h3 className='text-xl mt-4'>
                       ⏰ Horário:
                     </h3>
                     <ul className='list-disc text-lg mt-2 ml-7 text-gray-600'>
                       <li>
-                        Início:
+                        Início: {props.inicio}
                       </li>
                       <li>
-                        Término:
+                        Término: {props.termino}
                       </li>
                     </ul>
                   <div className="mt-4">

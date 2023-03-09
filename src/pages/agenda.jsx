@@ -6,14 +6,14 @@ import { useState, useEffect, useRef } from 'react'
 import Header from '@/components/Header'
 import Tabela from '@/components/tabela'
 
-// export async function getStaticProps() {
-//     const data = await fetch('http://localhost:8000/schedule/')
-//     const agenda = await data.json()
+export async function getStaticProps() {
+    const data = await fetch('http://localhost:8000/schedule/')
+    const agenda = await data.json()
 
-//     return {
-//         props : { agenda }
-//     }
-// }
+    return {
+        props : { agenda }
+    }
+}
 
 function getSemanaDecorrente() {
     const semanaFormat = [];
@@ -78,11 +78,11 @@ export default function Agenda({ agenda }) {
                             dragConstraints={{ right: 0, left: -width }}
                         >
                             
-                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'} dia={semana[1]} aulas={[{data : "06/03/2023", turma : "ADM1 (M)", aula:"Python", instrutor:"Cleber"}]}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'} dia={semana[2]} aulas={[]}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'} dia={semana[3]} aulas={[]}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'} dia={semana[4]} aulas={[]}/>
-                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'} dia={semana[5]} aulas={[]}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Segunda-Feira'} dia={semana[1]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Terça-Feira'} dia={semana[2]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quarta-Feira'} dia={semana[3]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Quinta-Feira'} dia={semana[4]} aulas={agenda}/>
+                            <Tabela setTrigger={setVerAula} dia_semana={'Sexta-Feira'} dia={semana[5]} aulas={agenda}/>
 
                         </motion.div>
                     </motion.div>

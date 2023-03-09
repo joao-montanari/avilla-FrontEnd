@@ -120,7 +120,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "ADM2 (T)" ?
-                                        <Popup/>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -130,14 +137,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS3 (T)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -147,14 +154,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS4 (T)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -164,14 +171,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS5 (M)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -181,14 +188,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS (6)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -198,14 +205,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "DS7 (T)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -215,14 +222,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MD3 (T)" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
@@ -232,14 +239,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MEC 1 Ano" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                        <Popup
+                                            instrutor={aula.instrutor}
+                                            aula={aula.aula}
+                                            data={aula.data}
+                                            inicio={aula.inicio}
+                                            termino={aula.termino}
+                                            sala={aula.sala}
+                                        />
                                 : null )
                             ))
                         }
@@ -249,14 +256,14 @@ export default function Tabela(props) {
                             aulas.map((aula) =>(
                                 (
                                     aula.turma == "MEC 2 Ano" ?
-                                        <div className='border border-gray-900 text-center m-1 rounded p-1 h-14'>
-                                            <p className='text-xs'>
-                                                {aula.instrutor}
-                                            </p>
-                                            <p className='text-xs'>
-                                                {aula.sala}
-                                            </p>
-                                        </div>
+                                    <Popup
+                                        instrutor={aula.instrutor}
+                                        aula={aula.aula}
+                                        data={aula.data}
+                                        inicio={aula.inicio}
+                                        termino={aula.termino}
+                                        sala={aula.sala}
+                                    />
                                 : null )
                             ))
                         }
