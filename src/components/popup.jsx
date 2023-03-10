@@ -1,8 +1,18 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 
 export default function Popup(props) {
   let [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    let horarioInicio = props.inicio.split(':');
+    let numHorarioInicio = parseInt(horarioInicio[0]);
+    let horarioTermino = props.termino.split(':');
+    let numHorarioTermino = parseInt(horarioTermino[0]);
+
+    let tamanho = numHorarioTermino - numHorarioInicio;
+    console.log(tamanho)
+  }, [])
 
   function closeModal() {
     setIsOpen(false)
@@ -17,7 +27,8 @@ export default function Popup(props) {
       <button
         type="button"
         onClick={openModal}
-        className={`duration-500 text-xs border border-gray-400 border-l-4 ${props.cor} rounded-xl h-14 w-[95%] mt-1 shadow hover:shadow-none hover:rounded-none hover:bg-slate-50`}
+        style={{borderLeft: `5px solid ${props.cor}`}}
+        className='duration-500 text-xs border border-gray-400 border-l-4 rounded-xl h-14 w-[95%] mt-1 shadow hover:shadow-none hover:rounded-none hover:bg-slate-50'
       >
         <p>
           {props.instrutor}
@@ -52,7 +63,10 @@ export default function Popup(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel 
+                  style={{borderLeft: `6px solid ${props.cor}`}}
+                  className="w-full max-w-md transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all"
+                >
                     <Dialog.Title
                     as="h1"
                     className="text-xl text-gray-900"

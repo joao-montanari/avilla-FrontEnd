@@ -110,6 +110,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -127,6 +128,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -144,6 +146,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -161,6 +164,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -178,6 +182,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -195,6 +200,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -212,6 +218,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -229,6 +236,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
@@ -246,6 +254,7 @@ export default function Tabela(props) {
                                             inicio={aula.inicio}
                                             termino={aula.termino}
                                             sala={aula.sala}
+                                            cor={aula.cor}
                                         />
                                 : null )
                             ))
@@ -263,6 +272,7 @@ export default function Tabela(props) {
                                         inicio={aula.inicio}
                                         termino={aula.termino}
                                         sala={aula.sala}
+                                        cor={aula.cor}
                                     />
                                 : null )
                             ))
