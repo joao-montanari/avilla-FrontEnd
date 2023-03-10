@@ -98,7 +98,7 @@ export default function Tabela(props) {
                     </li>
                 </ul>
                 <div className="flex">
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -116,7 +116,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -134,7 +134,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -152,7 +152,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -170,7 +170,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -188,7 +188,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -206,7 +206,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -224,7 +224,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -242,7 +242,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className="w-32 border-r border-black">
+                    <div className="w-32 border-r border-black relative">
                         {
                             aulas.map((aula) =>(
                                 (
@@ -260,7 +260,7 @@ export default function Tabela(props) {
                             ))
                         }
                     </div>
-                    <div className='w-32'>
+                    <div className='w-32 relative'>
                         {
                             aulas.map((aula) =>(
                                 (

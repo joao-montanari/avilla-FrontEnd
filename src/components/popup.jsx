@@ -3,15 +3,23 @@ import { Fragment, useState, useEffect } from 'react'
 
 export default function Popup(props) {
   let [isOpen, setIsOpen] = useState(false);
+  const [largura, setLargura] = useState(0);
+  const [margin, setMargin] = useState(4);
 
   useEffect(() => {
     let horarioInicio = props.inicio.split(':');
     let numHorarioInicio = parseInt(horarioInicio[0]);
     let horarioTermino = props.termino.split(':');
     let numHorarioTermino = parseInt(horarioTermino[0]);
+    let tamanho = ((numHorarioTermino - numHorarioInicio) + 1);
+    if (tamanho === 2) {
+      tamanho = (tamanho - 1);
+    }
+    let espacamento = (tamanho - 1) * 4
+    setLargura((56 * tamanho) + espacamento)
 
-    let tamanho = numHorarioTermino - numHorarioInicio;
-    console.log(tamanho)
+    setMargin((56 * (numHorarioInicio - 7)) + (4 * (1 + (numHorarioInicio - 7))))
+
   }, [])
 
   function closeModal() {
@@ -27,8 +35,8 @@ export default function Popup(props) {
       <button
         type="button"
         onClick={openModal}
-        style={{borderLeft: `5px solid ${props.cor}`}}
-        className='duration-500 text-xs border border-gray-400 border-l-4 rounded-xl h-14 w-[95%] mt-1 shadow hover:shadow-none hover:rounded-none hover:bg-slate-50'
+        style={{borderLeft: `6px solid ${props.cor}`, height: `${largura}px`, marginTop: `${margin}px`}}
+        className='duration-500 text-[13px] border border-gray-400 border-l-4 rounded-xl w-[95%] shadow hover:shadow-none hover:rounded-none absolute left-[3px]'
       >
         <p>
           {props.instrutor}
